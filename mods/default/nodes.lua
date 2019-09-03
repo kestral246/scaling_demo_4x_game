@@ -243,7 +243,7 @@ end
 
 minetest.register_node("default:stone", {
 	description = "Stone",
-	tiles = {"default_stone.png"},
+	tiles = {{name = "default_stone.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3, stone = 1},
 	drop = "default:cobble",
 	legacy_mineral = true,
@@ -252,7 +252,7 @@ minetest.register_node("default:stone", {
 
 minetest.register_node("default:cobble", {
 	description = "Cobblestone",
-	tiles = {"default_cobble.png"},
+	tiles = {{name = "default_cobble.png", align_style = "world", scale = 4}},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
@@ -278,7 +278,7 @@ minetest.register_node("default:stone_block", {
 
 minetest.register_node("default:mossycobble", {
 	description = "Mossy Cobblestone",
-	tiles = {"default_mossycobble.png"},
+	tiles = {{name = "default_mossycobble.png", align_style = "world", scale = 4}},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 1},
 	sounds = default.node_sound_stone_defaults(),
@@ -287,7 +287,7 @@ minetest.register_node("default:mossycobble", {
 
 minetest.register_node("default:desert_stone", {
 	description = "Desert Stone",
-	tiles = {"default_desert_stone.png"},
+	tiles = {{name = "default_desert_stone.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3, stone = 1},
 	drop = "default:desert_cobble",
 	legacy_mineral = true,
@@ -296,7 +296,7 @@ minetest.register_node("default:desert_stone", {
 
 minetest.register_node("default:desert_cobble", {
 	description = "Desert Cobblestone",
-	tiles = {"default_desert_cobble.png"},
+	tiles = {{name = "default_desert_cobble.png", align_style = "world", scale = 4}},
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
@@ -322,7 +322,7 @@ minetest.register_node("default:desert_stone_block", {
 
 minetest.register_node("default:sandstone", {
 	description = "Sandstone",
-	tiles = {"default_sandstone.png"},
+	tiles = {{name = "default_sandstone.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 1, cracky = 3},
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -347,7 +347,7 @@ minetest.register_node("default:sandstone_block", {
 
 minetest.register_node("default:desert_sandstone", {
 	description = "Desert Sandstone",
-	tiles = {"default_desert_sandstone.png"},
+	tiles = {{name = "default_desert_sandstone.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 1, cracky = 3},
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -372,7 +372,7 @@ minetest.register_node("default:desert_sandstone_block", {
 
 minetest.register_node("default:silver_sandstone", {
 	description = "Silver Sandstone",
-	tiles = {"default_silver_sandstone.png"},
+	tiles = {{name = "default_silver_sandstone.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 1, cracky = 3},
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -397,7 +397,7 @@ minetest.register_node("default:silver_sandstone_block", {
 
 minetest.register_node("default:obsidian", {
 	description = "Obsidian",
-	tiles = {"default_obsidian.png"},
+	tiles = {{name = "default_obsidian.png", align_style = "world", scale = 4}},
 	sounds = default.node_sound_stone_defaults(),
 	groups = {cracky = 1, level = 2},
 })
@@ -426,16 +426,14 @@ minetest.register_node("default:obsidian_block", {
 
 minetest.register_node("default:dirt", {
 	description = "Dirt",
-	tiles = {"default_dirt.png"},
+	tiles = {{name = "default_dirt.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("default:dirt_with_grass", {
 	description = "Dirt with Grass",
-	tiles = {"default_grass.png", "default_dirt.png",
-		{name = "default_dirt.png^default_grass_side.png",
-			tileable_vertical = false}},
+	tiles = {{name = "default_grass.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
 	drop = "default:dirt",
 	sounds = default.node_sound_dirt_defaults({
@@ -457,10 +455,7 @@ minetest.register_node("default:dirt_with_grass_footsteps", {
 
 minetest.register_node("default:dirt_with_dry_grass", {
 	description = "Dirt with Dry Grass",
-	tiles = {"default_dry_grass.png",
-		"default_dirt.png",
-		{name = "default_dirt.png^default_dry_grass_side.png",
-			tileable_vertical = false}},
+	tiles = {{name = "default_dry_grass.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1},
 	drop = "default:dirt",
 	sounds = default.node_sound_dirt_defaults({
@@ -470,9 +465,7 @@ minetest.register_node("default:dirt_with_dry_grass", {
 
 minetest.register_node("default:dirt_with_snow", {
 	description = "Dirt with Snow",
-	tiles = {"default_snow.png", "default_dirt.png",
-		{name = "default_dirt.png^default_snow_side.png",
-			tileable_vertical = false}},
+	tiles = {{name = "default_snow.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1, snowy = 1},
 	drop = "default:dirt",
 	sounds = default.node_sound_dirt_defaults({
@@ -482,12 +475,7 @@ minetest.register_node("default:dirt_with_snow", {
 
 minetest.register_node("default:dirt_with_rainforest_litter", {
 	description = "Dirt with Rainforest Litter",
-	tiles = {
-		"default_rainforest_litter.png",
-		"default_dirt.png",
-		{name = "default_dirt.png^default_rainforest_litter_side.png",
-			tileable_vertical = false}
-	},
+	tiles = {{name = "default_rainforest_litter.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
 	drop = "default:dirt",
 	sounds = default.node_sound_dirt_defaults({
@@ -497,12 +485,7 @@ minetest.register_node("default:dirt_with_rainforest_litter", {
 
 minetest.register_node("default:dirt_with_coniferous_litter", {
 	description = "Dirt with Coniferous Litter",
-	tiles = {
-		"default_coniferous_litter.png",
-		"default_dirt.png",
-		{name = "default_dirt.png^default_coniferous_litter_side.png",
-			tileable_vertical = false}
-	},
+	tiles = {{name = "default_coniferous_litter.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1, spreading_dirt_type = 1},
 	drop = "default:dirt",
 	sounds = default.node_sound_dirt_defaults({
@@ -512,16 +495,14 @@ minetest.register_node("default:dirt_with_coniferous_litter", {
 
 minetest.register_node("default:dry_dirt", {
 	description = "Dry Dirt",
-	tiles = {"default_dry_dirt.png"},
+	tiles = {{name = "default_dry_dirt.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("default:dry_dirt_with_dry_grass", {
 	description = "Dry Dirt with Dry Grass",
-	tiles = {"default_dry_grass.png", "default_dry_dirt.png",
-		{name = "default_dry_dirt.png^default_dry_grass_side.png",
-			tileable_vertical = false}},
+	tiles = {{name = "default_dry_grass.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, soil = 1},
 	drop = "default:dry_dirt",
 	sounds = default.node_sound_dirt_defaults({
@@ -531,25 +512,21 @@ minetest.register_node("default:dry_dirt_with_dry_grass", {
 
 minetest.register_node("default:permafrost", {
 	description = "Permafrost",
-	tiles = {"default_permafrost.png"},
+	tiles = {{name = "default_permafrost.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3},
 	sounds = default.node_sound_dirt_defaults(),
 })
 
 minetest.register_node("default:permafrost_with_stones", {
 	description = "Permafrost with Stones",
-	tiles = {"default_permafrost.png^default_stones.png",
-		"default_permafrost.png",
-		"default_permafrost.png^default_stones_side.png"},
+	tiles = {{name = "default_permafrost.png^default_stones.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3},
 	sounds = default.node_sound_gravel_defaults(),
 })
 
 minetest.register_node("default:permafrost_with_moss", {
 	description = "Permafrost with Moss",
-	tiles = {"default_moss.png", "default_permafrost.png",
-		{name = "default_permafrost.png^default_moss_side.png",
-			tileable_vertical = false}},
+	tiles = {{name = "default_moss.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3},
 	sounds = default.node_sound_dirt_defaults({
 		footstep = {name = "default_grass_footstep", gain = 0.25},
@@ -558,21 +535,21 @@ minetest.register_node("default:permafrost_with_moss", {
 
 minetest.register_node("default:sand", {
 	description = "Sand",
-	tiles = {"default_sand.png"},
+	tiles = {{name = "default_sand.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, falling_node = 1, sand = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
 minetest.register_node("default:desert_sand", {
 	description = "Desert Sand",
-	tiles = {"default_desert_sand.png"},
+	tiles = {{name = "default_desert_sand.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, falling_node = 1, sand = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
 minetest.register_node("default:silver_sand", {
 	description = "Silver Sand",
-	tiles = {"default_silver_sand.png"},
+	tiles = {{name = "default_silver_sand.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3, falling_node = 1, sand = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
@@ -580,7 +557,7 @@ minetest.register_node("default:silver_sand", {
 
 minetest.register_node("default:gravel", {
 	description = "Gravel",
-	tiles = {"default_gravel.png"},
+	tiles = {{name = "default_gravel.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 2, falling_node = 1},
 	sounds = default.node_sound_gravel_defaults(),
 	drop = {
@@ -594,7 +571,7 @@ minetest.register_node("default:gravel", {
 
 minetest.register_node("default:clay", {
 	description = "Clay",
-	tiles = {"default_clay.png"},
+	tiles = {{name = "default_clay.png", align_style = "world", scale = 4}},
 	groups = {crumbly = 3},
 	drop = "default:clay_lump 4",
 	sounds = default.node_sound_dirt_defaults(),
@@ -603,7 +580,7 @@ minetest.register_node("default:clay", {
 
 minetest.register_node("default:snow", {
 	description = "Snow",
-	tiles = {"default_snow.png"},
+	tiles = {{name = "default_snow.png", align_style = "world", scale = 4}},
 	inventory_image = "default_snowball.png",
 	wield_image = "default_snowball.png",
 	paramtype = "light",
@@ -650,7 +627,7 @@ minetest.register_node("default:snowblock", {
 -- 'is ground content = false' to avoid tunnels in sea ice or ice rivers
 minetest.register_node("default:ice", {
 	description = "Ice",
-	tiles = {"default_ice.png"},
+	tiles = {{name = "default_ice.png", align_style = "world", scale = 4}},
 	is_ground_content = false,
 	paramtype = "light",
 	groups = {cracky = 3, cools_lava = 1, slippery = 3},
@@ -660,7 +637,7 @@ minetest.register_node("default:ice", {
 -- Mapgen-placed ice with 'is ground content = true' to contain tunnels
 minetest.register_node("default:cave_ice", {
 	description = "Cave Ice",
-	tiles = {"default_ice.png"},
+	tiles = {{name = "default_ice.png", align_style = "world", scale = 4}},
 	paramtype = "light",
 	groups = {cracky = 3, cools_lava = 1, slippery = 3,
 		not_in_creative_inventory = 1},
@@ -1168,7 +1145,7 @@ minetest.register_node("default:aspen_sapling", {
 
 minetest.register_node("default:stone_with_coal", {
 	description = "Coal Ore",
-	tiles = {"default_stone.png^default_mineral_coal.png"},
+	tiles = {{name = "default_stone.png^default_mineral_coal.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3},
 	drop = "default:coal_lump",
 	sounds = default.node_sound_stone_defaults(),
@@ -1185,7 +1162,7 @@ minetest.register_node("default:coalblock", {
 
 minetest.register_node("default:stone_with_iron", {
 	description = "Iron Ore",
-	tiles = {"default_stone.png^default_mineral_iron.png"},
+	tiles = {{name = "default_stone.png^default_mineral_iron.png", align_style = "world", scale = 4}},
 	groups = {cracky = 2},
 	drop = "default:iron_lump",
 	sounds = default.node_sound_stone_defaults(),
@@ -1202,7 +1179,7 @@ minetest.register_node("default:steelblock", {
 
 minetest.register_node("default:stone_with_copper", {
 	description = "Copper Ore",
-	tiles = {"default_stone.png^default_mineral_copper.png"},
+	tiles = {{name = "default_stone.png^default_mineral_copper.png", align_style = "world", scale = 4}},
 	groups = {cracky = 2},
 	drop = "default:copper_lump",
 	sounds = default.node_sound_stone_defaults(),
@@ -1219,7 +1196,7 @@ minetest.register_node("default:copperblock", {
 
 minetest.register_node("default:stone_with_tin", {
 	description = "Tin Ore",
-	tiles = {"default_stone.png^default_mineral_tin.png"},
+	tiles = {{name = "default_stone.png^default_mineral_tin.png", align_style = "world", scale = 4}},
 	groups = {cracky = 2},
 	drop = "default:tin_lump",
 	sounds = default.node_sound_stone_defaults(),
@@ -1245,7 +1222,7 @@ minetest.register_node("default:bronzeblock", {
 
 minetest.register_node("default:stone_with_mese", {
 	description = "Mese Ore",
-	tiles = {"default_stone.png^default_mineral_mese.png"},
+	tiles = {{name = "default_stone.png^default_mineral_mese.png", align_style = "world", scale = 4}},
 	groups = {cracky = 1},
 	drop = "default:mese_crystal",
 	sounds = default.node_sound_stone_defaults(),
@@ -1263,7 +1240,7 @@ minetest.register_node("default:mese", {
 
 minetest.register_node("default:stone_with_gold", {
 	description = "Gold Ore",
-	tiles = {"default_stone.png^default_mineral_gold.png"},
+	tiles = {{name = "default_stone.png^default_mineral_gold.png", align_style = "world", scale = 4}},
 	groups = {cracky = 2},
 	drop = "default:gold_lump",
 	sounds = default.node_sound_stone_defaults(),
@@ -1280,7 +1257,7 @@ minetest.register_node("default:goldblock", {
 
 minetest.register_node("default:stone_with_diamond", {
 	description = "Diamond Ore",
-	tiles = {"default_stone.png^default_mineral_diamond.png"},
+	tiles = {{name = "default_stone.png^default_mineral_diamond.png", align_style = "world", scale = 4}},
 	groups = {cracky = 1},
 	drop = "default:diamond",
 	sounds = default.node_sound_stone_defaults(),
