@@ -91,11 +91,13 @@ minetest.register_node("doors:hidden", {
 	-- 1px transparent block inside door hinge near node top.
 	node_box = {
 		type = "fixed",
+		--fixed = {-15/32, 13/32, -15/32, -13/32, 1/2, -13/32},
 		fixed = {-15/32, 13/32, -15/32, -13/32, 1/2, -13/32},
 	},
 	-- collision_box needed otherise selection box would be full node size
 	collision_box = {
 		type = "fixed",
+		--fixed = {-15/32, 13/32, -15/32, -13/32, 1/2, -13/32},
 		fixed = {-15/32, 13/32, -15/32, -13/32, 1/2, -13/32},
 	},
 })
@@ -433,12 +435,18 @@ function doors.register(name, def)
 	def.sunlight_propagates = true
 	def.walkable = true
 	def.is_ground_content = false
+	-- type a box
 	def.buildable_to = false
-	def.selection_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-6/16}}
-	def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-6/16}}
-
+	--def.selection_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-6/16}}
+	def.selection_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,7/2,15/2,0/16}}
+	--def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-6/16}}
+	def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,7/2,15/2,0/16}}
+	-- type b box
 	def.mesh = "door_a.obj"
 	minetest.register_node(":" .. name .. "_a", def)
+
+	def.selection_box = {type = "fixed", fixed = {-7/2,-1/2,-1/2,1/2,15/2,0/16}}
+	def.collision_box = {type = "fixed", fixed = {-7/2,-1/2,-1/2,1/2,15/2,0/16}}
 
 	def.mesh = "door_b.obj"
 	minetest.register_node(":" .. name .. "_b", def)
@@ -701,19 +709,19 @@ doors.register_trapdoor("doors:trapdoor_steel", {
 })
 
 minetest.register_craft({
-	output = "doors:trapdoor 2",
+	output = 'doors:trapdoor 2',
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
-		{"group:wood", "group:wood", "group:wood"},
-		{"", "", ""},
+		{'group:wood', 'group:wood', 'group:wood'},
+		{'group:wood', 'group:wood', 'group:wood'},
+		{'', '', ''},
 	}
 })
 
 minetest.register_craft({
-	output = "doors:trapdoor_steel",
+	output = 'doors:trapdoor_steel',
 	recipe = {
-		{"default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot"},
+		{'default:steel_ingot', 'default:steel_ingot'},
+		{'default:steel_ingot', 'default:steel_ingot'},
 	}
 })
 
