@@ -4,9 +4,9 @@ Scaling Demo 4x for Minetest
 
 ![Screenshot](screenshot.png "Screenshot")
 
-Based on Aug 31, 2019 commit of minetest_game.
+Based on Aug 31, 2019 commit of minetest_game. Created with the corresponding master branch version of minetest. When used with the stable-5 branch, errors about invalid background elements show up when using the inventory, but it still appears to work. No guarantees though.
 
-This is a technology demo to give an example of what happens when the player character is scaled up by 4x, which gives the effect of shrinking all the nodes to 1/4th their original size.
+**This is a technology demo to give an example of what happens when the player character is scaled up by 4x, which gives the effect of shrinking all the nodes to 1/4th their original size.**
 
 To use this game with Minetest, place this repository in minetest/games directory.
 
