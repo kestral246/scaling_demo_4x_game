@@ -5,7 +5,7 @@ for i = 1, #dyes do
 
 	minetest.register_node("wool:" .. name, {
 		description = desc .. " Wool",
-		tiles = {"wool_" .. name .. ".png"},
+		tiles = {{name = "wool_" .. name .. ".png", align_style = "world", scale = 4}},
 		is_ground_content = false,
 		groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3,
 				flammable = 3, wool = 1},

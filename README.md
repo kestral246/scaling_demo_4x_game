@@ -29,3 +29,20 @@ To use this game with Minetest, place this repository in minetest/games director
 * Mapgen parameters really need to be scaled and tuned to look right at 4x, but my attempts haven't turned out too well.
 
 * No digging aids are currently provided. One could try the digall mod. Note that one original meter block is now 64 blocks, so digging and placing are now very tedious.
+
+
+
+**Quarter node house example:**
+
+![Quarter node house example](quarter_node_house.png "Quarter node house example")
+
+I thought it would be interesting to show what can be done with smaller nodes, so I made a scale model of my house, with a full interior.
+
+I have added the bakedclay mod to this game repo, to get more colors to play with, however I removed stairs and scaled the textures.
+I also had to scale some more default textures and I needed to update the steel_door texture to get rid of the window.
+
+I have included the schematic called schems/house_example.mts. To use, copy this file to worlds/yourworld/schems/house_example.mts and use your choice of schematic loading software, such as worldedit to load. **Warning: Only use this mts file with Scaling Demo 4x!**
+
+However, make sure you have enough flat space before loading, it's dimensions are 50 x 79 nodes, and it's around 30 nodes tall.
+
+**Comments:** Lighting is a problem inside. I have to set 'display_gamma = 3' (the max) to make it halfway decent, but if anyone knows any other better settings please let me know.

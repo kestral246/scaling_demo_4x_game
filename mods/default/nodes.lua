@@ -2142,7 +2142,7 @@ minetest.register_node("default:coral_orange", {
 
 minetest.register_node("default:coral_skeleton", {
 	description = "Coral Skeleton",
-	tiles = {"default_coral_skeleton.png"},
+	tiles = {{name = "default_coral_skeleton.png", align_style = "world", scale = 4}},
 	groups = {cracky = 3},
 	sounds = default.node_sound_stone_defaults(),
 })
