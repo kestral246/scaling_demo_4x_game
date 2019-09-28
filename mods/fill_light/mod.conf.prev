@@ -1,0 +1,3 @@
+name = fill_light
+description = Fill lights with selective visibility.
+depends = default
