@@ -16,7 +16,8 @@ player_api.register_model("character.b3d", {
 		sit       = {x = 81,  y = 160},
 	},
 	collisionbox = {-0.3*sf, 0.0, -0.3*sf, 0.3*sf, 1.7*sf, 0.3*sf},
-	stepheight = 0.6*sf,
+	--stepheight = 0.6*sf,
+	stepheight = 1.5,
 	eye_height = 1.47*sf,
 })
 
