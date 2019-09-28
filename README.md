@@ -45,4 +45,4 @@ I have included the schematic called schems/house_example.mts. To use, copy this
 
 However, make sure you have enough flat space before loading, it's dimensions are 50 x 79 nodes, and it's around 30 nodes tall.
 
-**Comments:** Lighting is a problem inside. I have to set 'display_gamma = 3' (the max) to make it halfway decent, but if anyone knows any other better settings please let me know.
+**Lighting:** Minetest only propagates the light from lamps a short range, which makes it very difficult to light a room at 4x scaling. To help get around this I have provided the fill_light mod, which allows placing fill lights that can then be made invisible. See mods/fill_lights/README.md for details. When first placing fill lights I recommend setting 'smooth_lighting = false' to better understand how the lighting works.
